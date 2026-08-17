@@ -6,6 +6,7 @@
     "dev": "npm run dev --prefix hackfest-web",
     "build": "npm run build --prefix hackfest-web",
     "start": "npm run start --prefix hackfest-web",
-    "lint": "npm run lint --prefix hackfest-web"
+    "lint": "npm run lint --prefix hackfest-web",
+    "push": "\"C:\\Users\\ijare\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Git.MinGit_Microsoft.Winget.Source_8wekyb3d8bbwe\\cmd\\git.exe\" push -u origin main"
   }
 }
