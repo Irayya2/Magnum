@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Hero() {
-  const [scrollOpacity, setScrollOpacity] = useState(1);
+  const [bannerOpacity, setBannerOpacity] = useState(1);
+  const [contentOpacity, setContentOpacity] = useState(1);
 
   useEffect(() => {
     const scrollContainer = document.querySelector(".ocean-scroll-container");
@@ -13,9 +14,14 @@ export default function Hero() {
     const handleScroll = () => {
       const scrollTop = scrollContainer.scrollTop;
       const height = window.innerHeight;
-      // Calculate opacity: starts at 1, goes to 0 as you scroll 70% of the viewport height down
-      const opacity = Math.max(0, 1 - scrollTop / (height * 0.7));
-      setScrollOpacity(opacity);
+      
+      // Banner fades out quickly (over first 25% of viewport scroll)
+      const bOpacity = Math.max(0, 1 - scrollTop / (height * 0.25));
+      setBannerOpacity(bOpacity);
+
+      // Hero text content fades out slowly (over first 70% of viewport scroll)
+      const cOpacity = Math.max(0, 1 - scrollTop / (height * 0.7));
+      setContentOpacity(cOpacity);
     };
 
     scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
@@ -25,12 +31,12 @@ export default function Hero() {
   return (
     <>
       {/* Full screen static banner image that covers the window and fades out on scroll */}
-      {scrollOpacity > 0 && (
+      {bannerOpacity > 0 && (
         <div
           className="fixed inset-0 pointer-events-none transition-opacity duration-75"
           style={{
             zIndex: 1, // behind the interactive hero elements but in front of 3D canvas
-            opacity: scrollOpacity,
+            opacity: bannerOpacity,
             backgroundImage: "url('/Gemini_Generated_Image_bjwlnbbjwlnbbjwl.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -42,7 +48,7 @@ export default function Hero() {
       <section
         className="relative h-screen w-full flex flex-col items-center justify-center z-10 pointer-events-none"
         id="hero"
-        style={{ opacity: scrollOpacity }}
+        style={{ opacity: contentOpacity }}
       >
         {/* Gogte College of Commerce presents */}
         <div className="pointer-events-auto flex flex-col items-center mb-2">
