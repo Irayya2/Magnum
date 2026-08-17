@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="relative select-none">
           {/* Logo background layer (creates a thick outline / back shadow) */}
           <h1
-            className="font-pirate text-[5.5rem] md:text-[9.5rem] xl:text-[11.5rem] leading-none text-center hover:scale-102 transition-transform duration-500 cursor-default select-none pr-8 md:pr-14"
+            className="font-pirate text-[14vw] md:text-[9.5rem] xl:text-[11.5rem] leading-none text-center hover:scale-102 transition-transform duration-500 cursor-default select-none pr-[8vw] md:pr-14"
             style={{
               background: "linear-gradient(to bottom, #591616, #2d0a0a)",
               WebkitBackgroundClip: "text",
@@ -43,10 +43,10 @@ export default function Hero() {
           
           {/* SVG 3D Compass Rose Star */}
           <div 
-            className="absolute top-0 right-0 -mr-3 -mt-6 md:-mr-4 md:-mt-8 animate-float pointer-events-none"
+            className="absolute top-0 right-0 -mr-[1vw] -mt-[4vw] md:-mr-4 md:-mt-8 animate-float pointer-events-none"
             style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.7))" }}
           >
-            <svg viewBox="0 0 100 100" className="w-16 h-16 md:w-28 md:h-28">
+            <svg viewBox="0 0 100 100" className="w-[15vw] h-[15vw] md:w-28 md:h-28">
               {/* Outer gold circle */}
               <circle cx="50" cy="50" r="30" fill="none" stroke="#dca236" strokeWidth="1.5" />
               <circle cx="50" cy="50" r="26" fill="none" stroke="#dca236" strokeWidth="0.5" strokeDasharray="1 3" />
