@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="54" fill="none" stroke="#c2410c" stroke-width="5"/>
+  <!-- Inner hub -->
+  <circle cx="60" cy="60" r="14" fill="none" stroke="#c2410c" stroke-width="4"/>
+  <circle cx="60" cy="60" r="6" fill="#c2410c"/>
+  <!-- 8 spokes -->
+  <line x1="60" y1="46" x2="60" y2="8" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="60" y1="74" x2="60" y2="112" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="46" y1="60" x2="8" y2="60" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="74" y1="60" x2="112" y2="60" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="50" x2="22" y2="22" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="70" x2="98" y2="98" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="70" y1="50" x2="98" y2="22" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="70" x2="22" y2="98" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  <!-- Spoke handles -->
+  <circle cx="60" cy="8" r="5" fill="#ea580c"/>
+  <circle cx="60" cy="112" r="5" fill="#ea580c"/>
+  <circle cx="8" cy="60" r="5" fill="#ea580c"/>
+  <circle cx="112" cy="60" r="5" fill="#ea580c"/>
+  <circle cx="22" cy="22" r="5" fill="#ea580c"/>
+  <circle cx="98" cy="98" r="5" fill="#ea580c"/>
+  <circle cx="98" cy="22" r="5" fill="#ea580c"/>
+  <circle cx="22" cy="98" r="5" fill="#ea580c"/>
+</svg>

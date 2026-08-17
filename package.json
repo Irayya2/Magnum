@@ -1,0 +1,11 @@
+{
+  "name": "mangum-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix hackfest-web",
+    "build": "npm run build --prefix hackfest-web",
+    "start": "npm run start --prefix hackfest-web",
+    "lint": "npm run lint --prefix hackfest-web"
+  }
+}

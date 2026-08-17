@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-pirate: 'Pirata One', serif;
+  --font-crimson: 'Crimson Text', serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-jakarta);
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Font utility classes */
+.font-pirate { font-family: var(--font-pirate); }
+.font-crimson { font-family: var(--font-crimson); }
+.font-jakarta { font-family: var(--font-jakarta); }
+
+/* =====================
+   KEYFRAME ANIMATIONS
+   ===================== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50%       { transform: translateY(-12px) rotate(-2deg); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 10px currentColor; }
+  50%       { opacity: 0.8; box-shadow: 0 0 30px currentColor; }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Animation utility classes */
+.animate-float        { animation: float 4s ease-in-out infinite; }
+.animate-float-gentle { animation: floatGentle 3s ease-in-out infinite; }
+.animate-spin-slow    { animation: spinSlow 4s linear infinite; }
+.animate-bounce-slow  { animation: bounce 2s ease-in-out infinite; }
+.animate-pulse-glow   { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-fade-in-up   { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-fade-in      { animation: fadeIn 0.6s ease-out forwards; }
+.animate-slide-left   { animation: slideInLeft 0.6s ease-out forwards; }
+.animate-slide-right  { animation: slideInRight 0.6s ease-out forwards; }
+
+/* =====================
+   GLASSMORPHISM CARDS
+   ===================== */
+.glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 1.5rem;
+}
+
+.glass-card:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+/* =====================
+   LEATHER TEXTURE
+   ===================== */
+.leather-nav {
+  background-image: url('/teal-leather.webp');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(0, 80, 60, 0.7);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* =====================
+   PIRATE PLAQUE
+   ===================== */
+.pirate-plaque {
+  background-color: #34211e;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 12px),
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 20px);
+  clip-path: polygon(2% 0%, 98% 5%, 100% 100%, 0% 95%);
+}
+
+/* =====================
+   CYAN GLOW TEXT
+   ===================== */
+.cyan-glow {
+  text-shadow: 0 0 15px rgba(0, 200, 255, 0.8), 0 0 40px rgba(0, 200, 255, 0.3);
+}
+
+.gold-glow {
+  text-shadow: 0 0 20px rgba(234,179,8,0.5), 0 0 40px rgba(234,179,8,0.2);
+}
+
+/* =====================
+   TIMELINE LINE
+   ===================== */
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, rgba(34,211,238,0.5), transparent);
+}
+
+/* =====================
+   ACCORDION
+   ===================== */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+}
+.accordion-content.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.accordion-content > div {
+  overflow: hidden;
+}
+
+/* =====================
+   SCROLLBAR-FREE MAIN
+   ===================== */
+.ocean-scroll-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.ocean-scroll-container::-webkit-scrollbar { display: none; }
