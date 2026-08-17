@@ -4,8 +4,8 @@ import VoyageLogs from "@/components/VoyageLogs";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Timeline — Hackfest'26",
-  description: "Key dates and milestones for Hackfest'26, the 36-hour national hackathon.",
+  title: "Timeline — Magnum'26",
+  description: "Key dates and milestones for Magnum'26, the 36-hour national hackathon.",
 };
 
 export default function TimelinePage() {

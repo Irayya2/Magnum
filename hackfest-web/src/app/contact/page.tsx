@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact — Hackfest'26",
-  description: "Get in touch with the Hackfest team.",
+  title: "Contact — Magnum'26",
+  description: "Get in touch with the Magnum team.",
 };
 
 export default function ContactPage() {

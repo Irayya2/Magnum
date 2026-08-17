@@ -43,7 +43,7 @@ export default function Hero() {
             WebkitTextStroke: "1px #8a5a00",
           }}
         >
-          Hackfest
+          Magnum
         </h1>
 
         {/* Subtitle plaque */}

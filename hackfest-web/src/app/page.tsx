@@ -52,9 +52,9 @@ export default function HomePage() {
         <div className="ocean-scroll-container">
           {/* SR-only SEO content */}
           <div className="sr-only">
-            <h1>Hackfest&apos;26 — 36-Hour National Level Hackathon</h1>
+            <h1>Magnum&apos;26 — 36-Hour National Level Hackathon</h1>
             <p>
-              Hackfest is a 36-hour National Level Hackathon organised by Finite Loop Club
+              Magnum is a 36-hour National Level Hackathon organised by Finite Loop Club
               at Gogte College of Commerce, Tilawadi, Belgavi, Karnataka, India.
               Theme: Codequest — The Grand Voyage.
             </p>

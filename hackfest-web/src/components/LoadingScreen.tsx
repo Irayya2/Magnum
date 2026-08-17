@@ -78,7 +78,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               letterSpacing: "0.02em",
             }}
           >
-            Hackfest
+            Magnum
           </h1>
           <span
             className="block text-right text-xs font-crimson tracking-[0.3em] uppercase"
@@ -111,7 +111,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
             boxShadow: "0 0 20px rgba(245,158,11,0.2)",
           }}
         >
-          <span className="font-pirate text-amber-500 text-xl font-bold">HF</span>
+          <span className="font-pirate text-amber-500 text-xl font-bold">M</span>
         </div>
       </div>
 

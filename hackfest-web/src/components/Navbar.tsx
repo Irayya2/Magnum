@@ -58,7 +58,7 @@ export default function Navbar() {
               boxShadow: "0 0 12px rgba(245,158,11,0.2)",
             }}
           >
-            <span className="font-pirate text-amber-400 text-sm font-bold leading-none">HF</span>
+            <span className="font-pirate text-amber-400 text-sm font-bold leading-none">M</span>
           </div>
         </Link>
 

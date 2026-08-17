@@ -97,8 +97,8 @@ export default function Footer() {
               {/* Hackfest logo */}
               <Link href="/" className="relative z-50 pointer-events-auto">
                 <img
-                  src="/logos/hf-badge.png"
-                  alt="Hackfest"
+                  src="/logos/magnum-logo.png"
+                  alt="Magnum"
                   className="w-16 h-16 object-contain transition-all duration-300"
                   style={{ filter: "drop-shadow(0 0 12px rgba(251,191,36,0.5))" }}
                   onError={(e) => {
@@ -185,7 +185,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="relative z-10 border-t border-amber-900/40 py-4 text-center">
           <p className="font-crimson text-amber-100/50 text-xs tracking-wide">
-            © 2026 Hackfest · Organised by Finite Loop Club, Gogte College of Commerce, Tilawadi, Belgavi ·{" "}
+            © 2026 Magnum · Organised by Finite Loop Club, Gogte College of Commerce, Tilawadi, Belgavi ·{" "}
             <a href="https://finiteloop.club/" target="_blank" rel="noopener noreferrer"
               className="hover:text-amber-200 transition-colors">
               finiteloop.club

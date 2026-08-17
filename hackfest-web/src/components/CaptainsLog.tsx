@@ -32,7 +32,7 @@ export default function CaptainsLog() {
             >
               <img
                 src="/images/brochure/cover1.webp"
-                alt="Hackfest Participant Manual Cover"
+                alt="Magnum Participant Manual Cover"
                 className="absolute inset-0 w-full h-full object-cover"
                 onError={(e) => {
                   // Show placeholder brochure
@@ -47,7 +47,7 @@ export default function CaptainsLog() {
               >
                 <div className="text-amber-400 text-4xl mb-3">📜</div>
                 <div className="font-pirate text-amber-300 text-lg text-center leading-tight">
-                  Hackfest<br />Season 3
+                  Magnum<br />Season 3
                 </div>
                 <div className="mt-3 px-3 py-1.5 rounded bg-amber-900/50 border border-amber-600/30">
                   <span className="font-crimson text-amber-200 text-xs tracking-wider uppercase">
