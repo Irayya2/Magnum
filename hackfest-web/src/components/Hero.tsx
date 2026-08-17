@@ -1,13 +1,49 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Hero() {
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector(".ocean-scroll-container");
+    if (!scrollContainer) return;
+
+    const handleScroll = () => {
+      const scrollTop = scrollContainer.scrollTop;
+      const height = window.innerHeight;
+      // Calculate opacity: starts at 1, goes to 0 as you scroll 70% of the viewport height down
+      const opacity = Math.max(0, 1 - scrollTop / (height * 0.7));
+      setScrollOpacity(opacity);
+    };
+
+    scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
+    return () => scrollContainer.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section
-      className="relative h-screen w-full flex flex-col items-center justify-center z-10 pointer-events-none"
-      id="hero"
-    >
+    <>
+      {/* Full screen static banner image that covers the window and fades out on scroll */}
+      {scrollOpacity > 0 && (
+        <div
+          className="fixed inset-0 pointer-events-none transition-opacity duration-75"
+          style={{
+            zIndex: 1, // behind the interactive hero elements but in front of 3D canvas
+            opacity: scrollOpacity,
+            backgroundImage: "url('/logos/magnum-logo.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      )}
+
+      <section
+        className="relative h-screen w-full flex flex-col items-center justify-center z-10 pointer-events-none"
+        id="hero"
+        style={{ opacity: scrollOpacity }}
+      >
       {/* Gogte College of Commerce presents */}
       <div className="pointer-events-auto flex flex-col items-center mb-2">
         <div className="flex items-center gap-2 mb-1">
@@ -149,5 +185,6 @@ export default function Hero() {
         </svg>
       </div>
     </section>
+    </>
   );
 }
