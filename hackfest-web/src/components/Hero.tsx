@@ -31,7 +31,7 @@ export default function Hero() {
           style={{
             zIndex: 1, // behind the interactive hero elements but in front of 3D canvas
             opacity: scrollOpacity,
-
+            backgroundImage: "url('/Gemini_Generated_Image_bjwlnbbjwlnbbjwl.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
