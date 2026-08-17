@@ -31,7 +31,7 @@ export default function Hero() {
           style={{
             zIndex: 1, // behind the interactive hero elements but in front of 3D canvas
             opacity: scrollOpacity,
-            backgroundImage: "url('/logos/magnum-logo.png')",
+
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -62,46 +62,45 @@ export default function Hero() {
         {/* Spacing to align with the background image logo */}
         <div className="h-[28vh] md:h-[35vh]" />
 
-          {/* Subtitle plaque */}
+        {/* Subtitle plaque */}
+        <div
+          className="relative mt-6 px-8 py-5 animate-float pointer-events-auto"
+          style={{ filter: "drop-shadow(0 10px 10px rgba(0,0,0,0.6))" }}
+        >
+          {/* Plaque background */}
           <div
-            className="relative mt-6 px-8 py-5 animate-float pointer-events-auto"
-            style={{ filter: "drop-shadow(0 10px 10px rgba(0,0,0,0.6))" }}
-          >
-            {/* Plaque background */}
-            <div
-              className="absolute inset-0 rounded-sm"
-              style={{
-                background: "#34211e",
-                backgroundImage: `
+            className="absolute inset-0 rounded-sm"
+            style={{
+              background: "#34211e",
+              backgroundImage: `
                 repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 12px),
                 repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 20px)
               `,
-                clipPath: "polygon(2% 0%, 98% 5%, 100% 100%, 0% 95%)",
-              }}
-            />
+              clipPath: "polygon(2% 0%, 98% 5%, 100% 100%, 0% 95%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 bg-black/20"
+            style={{ clipPath: "polygon(2% 0%, 98% 5%, 100% 100%, 0% 95%)" }}
+          />
+          {/* Corner nails */}
+          {[
+            "top-2 left-4",
+            "top-3 right-5",
+          ].map((pos, i) => (
             <div
-              className="absolute inset-0 bg-black/20"
-              style={{ clipPath: "polygon(2% 0%, 98% 5%, 100% 100%, 0% 95%)" }}
+              key={i}
+              className={`absolute ${pos} w-2.5 h-2.5 rounded-full bg-[#1a0f0a]`}
+              style={{ boxShadow: "inset 1px 1px 2px rgba(255,255,255,0.2)" }}
             />
-            {/* Corner nails */}
-            {[
-              "top-2 left-4",
-              "top-3 right-5",
-            ].map((pos, i) => (
-              <div
-                key={i}
-                className={`absolute ${pos} w-2.5 h-2.5 rounded-full bg-[#1a0f0a]`}
-                style={{ boxShadow: "inset 1px 1px 2px rgba(255,255,255,0.2)" }}
-              />
-            ))}
-            {/* Text */}
-            <p
-              className="relative z-10 text-xl xl:text-3xl font-crimson font-bold italic text-[#d7ccc8] tracking-widest drop-shadow-md opacity-90"
-              style={{ transform: "rotate(1deg)" }}
-            >
-              Codequest: The Grand Voyage
-            </p>
-          </div>
+          ))}
+          {/* Text */}
+          <p
+            className="relative z-10 text-xl xl:text-3xl font-crimson font-bold italic text-[#d7ccc8] tracking-widest drop-shadow-md opacity-90"
+            style={{ transform: "rotate(1deg)" }}
+          >
+            Codequest: The Grand Voyage
+          </p>
         </div>
 
         {/* Scroll down indicator */}
