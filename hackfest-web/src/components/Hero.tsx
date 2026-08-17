@@ -31,11 +31,9 @@ export default function Hero() {
           <h1
             className="font-pirate text-[14vw] md:text-[9.5rem] xl:text-[11.5rem] leading-none text-center hover:scale-102 transition-transform duration-500 cursor-default select-none pr-[8vw] md:pr-14"
             style={{
-              background: "linear-gradient(to bottom, #591616, #2d0a0a)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              WebkitTextStroke: "2.5px #dca236",
-              filter: "drop-shadow(3px 3px 0px #3a1a00) drop-shadow(0 0 30px rgba(245,158,11,0.25)) drop-shadow(4px 8px 16px rgba(0,0,0,0.85))",
+              color: "#5e1414",
+              WebkitTextStroke: "2px #dca236",
+              textShadow: "2px 2px 0px #4d2f03, 4px 4px 0px #1a0f01, 0 15px 30px rgba(0,0,0,0.85)",
             }}
           >
             Magnum
@@ -47,8 +45,8 @@ export default function Hero() {
             style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.7))" }}
           >
             <svg viewBox="0 0 100 100" className="w-[15vw] h-[15vw] md:w-28 md:h-28">
-              {/* Outer gold circle */}
-              <circle cx="50" cy="50" r="30" fill="none" stroke="#dca236" strokeWidth="1.5" />
+              {/* Outer gold circle with dark leather fill */}
+              <circle cx="50" cy="50" r="30" fill="#200d07" stroke="#dca236" strokeWidth="1.5" />
               <circle cx="50" cy="50" r="26" fill="none" stroke="#dca236" strokeWidth="0.5" strokeDasharray="1 3" />
               
               {/* North pointer */}
