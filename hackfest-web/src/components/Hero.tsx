@@ -24,27 +24,15 @@ export default function Hero() {
       </div>
 
       {/* Main Hackfest logo / title */}
-      <div className="pointer-events-auto flex flex-col items-center">
-        {/* Compass star */}
-        <div
-          className="text-amber-300/80 text-4xl mb-1"
-          style={{ textShadow: "0 0 20px rgba(245,158,11,0.5)" }}
-        >
-          ✦
-        </div>
-
-        {/* Hackfest wordmark */}
-        <h1
-          className="font-pirate text-[5.5rem] md:text-[9rem] xl:text-[11rem] leading-none text-center hover:scale-105 transition-transform duration-500 cursor-default"
+      <div className="pointer-events-auto flex flex-col items-center max-w-[95vw] md:max-w-[80vw] lg:max-w-[70vw]">
+        <img
+          src="/logos/magnum-logo.png"
+          alt="Magnum Banner"
+          className="w-full h-auto object-contain rounded-2xl border-4 border-[#b45309]/40 hover:scale-[1.02] transition-all duration-500 cursor-default"
           style={{
-            color: "#c8860a",
-            textShadow:
-              "2px 4px 0px #5a3a00, 4px 8px 0px rgba(0,0,0,0.5), 0 0 40px rgba(200,134,10,0.3)",
-            WebkitTextStroke: "1px #8a5a00",
+            boxShadow: "0 25px 60px rgba(0, 0, 0, 0.9), 0 0 50px rgba(245,158,11,0.2)",
           }}
-        >
-          Magnum
-        </h1>
+        />
 
         {/* Subtitle plaque */}
         <div
